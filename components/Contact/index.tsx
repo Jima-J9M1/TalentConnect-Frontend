@@ -1,19 +1,75 @@
+'use client';
+import contactUs, { ContactUsResponse } from '@/app/lib/repository/contactApi';
+import { ContactUsBody } from '@/app/lib/repository/contactApi';
+import { useState, ChangeEvent, FormEvent } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+// import contactUs, { ContactUsBody, ContactUsResponse } from '@/lib/contactApi';
 
-const Contact = () => {
+const Contact: React.FC = () => {
+  const [firstname, setFirstname] = useState('');
+  const [lastname, setLastname] = useState('');
+  const [email, setEmail] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [message, setMessage] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [response, setResponse] = useState("");
+  const [success, setSuccess] = useState(false)
+  const [error, setError] = useState(false);
 
-/*
-Contact us section - 7
-Title - Let’s talk about your talent need
-Our Location - Addis Ababa Science and Technology University, Addis Ababa
-How can we help - ‘jima and mehari or mati
-
-*/
+  const handleSendMessage = async (e: FormEvent) => {
+    e.preventDefault();
+    if (!firstname || !lastname || !email || !phoneNumber || !message) {
+      return;
+    }
+    const data: ContactUsBody = {
+      firstname,
+      lastname,
+      email,
+      phoneNumber,
+      message,
+    };
+    setLoading(true);
+    console.log(data);
+    try {
+      const response: ContactUsResponse = await contactUs(data);
+      if (response) {
+        setLoading(false);
+        setFirstname('');
+        setLastname('');
+        setEmail('');
+        setPhoneNumber('');
+        setMessage('');
+        setResponse(response.message)
+        setSuccess(true)
+        setTimeout(() => {
+          setSuccess(false);
+        }, 3000);
+        toast.success('We have successfully received your message. Thank you!');
+      }
+    } catch (error) {
+      console.log(error);
+      setLoading(false);
+      setError(true);
+      setTimeout(() => {
+        setSuccess(false);
+      }, 3000);
+      toast.error('Something went wrong. Please try again.');
+    }
+  };
 
   return (
-    <section id="contact" className="relative py-20 md:py-[120px] mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
+    <section
+      id="contact"
+      className="relative py-20 md:py-[120px] mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0"
+    >
+      {/* <ToastContainer /> */}
       <div className="absolute left-0 top-0 -z-[1] h-full w-full dark:bg-dark"></div>
-      <div className={`absolute left-0 top-0 -z-[1] h-1/2 w-full "first-letter:" bg-[#E9F9FF] dark:bg-blacksection lg:h-[45%] xl:h-1/2`}></div>
+      <div
+        className={`absolute left-0 top-0 -z-[1] h-1/2 w-full "first-letter:" bg-[#E9F9FF] dark:bg-blacksection lg:h-[45%] xl:h-1/2`}
+      ></div>
       <div className="container px-4">
+      
         <div className="-mx-4 flex flex-wrap items-center">
           <div className="w-full px-4 lg:w-7/12 xl:w-8/12">
             <div className="ud-contact-content-wrapper">
@@ -22,7 +78,7 @@ How can we help - ‘jima and mehari or mati
                   CONTACT US
                 </span>
                 <h2 className="max-w-[260px] text-[35px] font-semibold leading-[1.14] text-dark dark:text-white">
-                  Let&#39;s talk about your talent need
+                  Let's talk about your talent need
                 </h2>
               </div>
               <div className="mb-12 flex flex-wrap justify-between lg:mb-0">
@@ -43,7 +99,7 @@ How can we help - ‘jima and mehari or mati
                       Our Location
                     </h3>
                     <p className="text-base text-body-color dark:text-dark-6">
-                    Addis Ababa Science and Technology University, Addis Ababa
+                      Addis Ababa Science and Technology University, Addis Ababa
                     </p>
                   </div>
                 </div>
@@ -79,21 +135,49 @@ How can we help - ‘jima and mehari or mati
               data-wow-delay=".2s
               "
             >
+              <ToastContainer />
+              
+              {success && <span className='text-green-500'>{response}</span>}
+              {error && <span className='text-red-500'>{response}</span>}
               <h3 className="mb-8 text-2xl font-semibold text-dark dark:text-white md:text-[28px] md:leading-[1.42]">
                 Send us a Message
               </h3>
-              <form className="flex flex-col gap-2">
+              <form className="flex flex-col gap-2" onSubmit={handleSendMessage}>
                 <div className="mb-[22px]">
                   <label
-                    htmlFor="fullName"
+                    htmlFor="firstName"
                     className="mb-4 block text-sm text-body-color dark:text-dark-6"
                   >
-                    Full Name*
+                    First Name*
                   </label>
                   <input
+                    value={firstname}
+                    onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                      setFirstname(e.currentTarget.value)
+                    }
+                    required
                     type="text"
-                    name="fullName"
+                    name="firstName"
                     placeholder="Jima Dube"
+                    className="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
+                  />
+                </div>
+                <div className="mb-[22px]">
+                  <label
+                    htmlFor="lastName"
+                    className="mb-4 block text-sm text-body-color dark:text-dark-6"
+                  >
+                    Last Name*
+                  </label>
+                  <input
+                    value={lastname}
+                    onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                      setLastname(e.currentTarget.value)
+                    }
+                    required
+                    type="text"
+                    name="lastName"
+                    placeholder="Last Name"
                     className="w-full border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
                   />
                 </div>
@@ -105,6 +189,11 @@ How can we help - ‘jima and mehari or mati
                     Email*
                   </label>
                   <input
+                    value={email}
+                    onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                      setEmail(e.currentTarget.value)
+                    }
+                    required
                     type="email"
                     name="email"
                     placeholder="example@yourmail.com"
@@ -119,6 +208,11 @@ How can we help - ‘jima and mehari or mati
                     Phone*
                   </label>
                   <input
+                    value={phoneNumber}
+                    onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                      setPhoneNumber(e.currentTarget.value)
+                    }
+                    required
                     type="text"
                     name="phone"
                     placeholder="+251-923-234-344"
@@ -133,8 +227,13 @@ How can we help - ‘jima and mehari or mati
                     Message*
                   </label>
                   <textarea
+                    value={message}
+                    onChange={(e: ChangeEvent<HTMLTextAreaElement>) =>
+                      setMessage(e.currentTarget.value)
+                    }
                     name="message"
                     rows={1}
+                    minLength={8}
                     placeholder="type your message here"
                     className="w-full resize-none border-0 border-b border-[#f1f1f1] bg-transparent pb-3 text-dark placeholder:text-body-color/60 focus:border-primary focus:outline-none dark:border-dark-3 dark:text-white"
                   ></textarea>
@@ -144,7 +243,7 @@ How can we help - ‘jima and mehari or mati
                     type="submit"
                     className="inline-flex items-center justify-center rounded-md bg-primary px-10 py-3 text-base font-medium text-white transition duration-300 ease-in-out hover:bg-primary/90"
                   >
-                    Send
+                    {loading ? 'Sending...' : 'Send'}
                   </button>
                 </div>
               </form>
