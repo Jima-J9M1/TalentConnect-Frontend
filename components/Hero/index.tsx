@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 const   Hero = () => {
@@ -25,13 +26,14 @@ const   Hero = () => {
 
               <div className="mt-10">
                   <div className="flex justify-center sm:justify-start">
-                    <button
+                    <Link
+                      href={"https://talent-connect-developer-frontend.vercel.app/hire"}
                       aria-label="get started button"
                       className="flex rounded-full bg-black px-7.5 py-2.5 text-white duration-300 ease-in-out hover:bg-blackho dark:bg-btndark dark:hover:bg-blackho"
                     >
                       Hire Now
 
-                    </button>
+                    </Link>
                   </div>
               </div>
             </div>
@@ -43,31 +45,31 @@ const   Hero = () => {
                   alt="shape"
                   width={46}
                   height={246}
-                  className="absolute -left-11.5 top-0 z-10"
+                  className="absolute -left-11.5 top-0 z-50"
                 />
                 <Image
                   src="/images/shape/shape-02.svg"
                   alt="shape"
                   width={36.9}
                   height={36.7}
-                  className="absolute bottom-0 right-0 z-10"
+                  className="absolute bottom-0 right-0 z-50"
                 />
                 <Image
                   src="/images/shape/shape-03.svg"
                   alt="shape"
                   width={21.64}
                   height={21.66}
-                  className="absolute -right-6.5 bottom-0 z-10"
+                  className="absolute -right-6.5 bottom-0 z-50"
                 />
-                <div className=" relative aspect-[700/444] w-full">
+                <div className="aspect-[700/444] w-full z-10">
                   <Image
-                    className="shadow-solid-l dark:hidden object-cover z-1"
+                    className="shadow-solid-l dark:hidden object-cover z-1 bg-[#F9FAFD] bg-bottom-[#F5F7FB] bg-right-[#F6F7FB] bg-left-[#F5F7FB]"
                     src="/images/hero/hero-1.png"
                     alt="Hero"
                     fill
                   />
                   <Image
-                    className="hidden shadow-solid-l dark:block object-cover"
+                    className="hidden shadow-solid-l dark:block object-cover "
                     src="/images/hero/hero-1.png"
                     alt="Hero"
                     fill

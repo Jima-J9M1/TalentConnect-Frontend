@@ -1,0 +1,1 @@
+export const openGraphImage = { images: ['/images/logo/Connect.png']}
