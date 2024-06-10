@@ -9,7 +9,7 @@ import "../globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 import ToasterContext from "../context/ToastContext";
-import Footer from "@/components/Footer";
+import Footer from "@/components/footer";
 
 export default function RootLayout({
   children,
