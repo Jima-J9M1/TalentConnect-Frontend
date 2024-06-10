@@ -1,6 +1,7 @@
 import About from "@/components/About";
 import CTA from "@/components/CTA";
 import Contact from "@/components/Contact";
+import FAQ from "@/components/FAQ";
 import Feature from "@/components/Features";
 import FeaturesTab from "@/components/FeaturesTab";
 import Hero from "@/components/Hero";
@@ -35,7 +36,7 @@ export default function Home() {
       {/* <Integration /> */}
       <ReasonCards />
       <CTA />
-      {/* <FAQ /> */}
+      <FAQ />
       {/* <Testimonial /> */}
       <Contact />
       {/* <Blog /> */}
