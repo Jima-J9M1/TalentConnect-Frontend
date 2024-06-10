@@ -1,41 +1,38 @@
 import Image from "next/image";
 
-
-
-/* 
-
-About Us Section - 2
-Title: Empowering Tomorrow’s Innovators
-Content: At TalentConnect, we are proud to hail from Addis Ababa Science and Technology University (AASTU), renowned for nurturing some of the brightest minds in software engineering. Our team comprises driven software engineering students and alumni deeply passionate about connecting top talent with leading companies. With AASTU's rigorous academic programs and our dedication to excellence, we're reshaping the hiring landscape for skilled engineers, one connection at a time.
-CTA: Learn More
-
-*/
 const About = () => {
   return (
+    <>
     <section
       id="about"
-      className="bg-gray-1 pb-8 sm:pt-20 dark:bg-dark-2 lg:pb-[70px] lg:pt-[120px] mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0"
+      className="bg-gray-1 pb-8 pt-20 dark:bg-dark-2 lg:pb-[70px] lg:pt-[120px] lg:px-[24px]"
     >
+      <h1 className="text-center text-black text-4xl font-bold py-12">About Us</h1>
       <div className="container">
         <div className="wow fadeInUp" data-wow-delay=".2s">
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <div className="mb-12 max-w-[540px] lg:mb-0">
                 <h2 className="mb-5 text-3xl font-bold leading-tight text-dark dark:text-white sm:text-[40px] sm:leading-[1.2]">
-                Empowering Tomorrow’s Innovators
+                  Brilliant Toolkit to Build Next.js SaaS Websites.
                 </h2>
                 <p className="mb-10 text-base leading-relaxed text-body-color dark:text-dark-6">
-                At TalentConnect, we are proud to hail from Addis Ababa Science and Technology University (AASTU), renowned for nurturing some of the brightest minds in software engineering. Our team comprises driven software engineering students and alumni deeply passionate about connecting top talent with leading companies. With AASTU's rigorous academic programs and our dedication to excellence, we're reshaping the hiring landscape for skilled engineers, one connection at a time.
+                  The main thrust is to focus on educating attendees on how to
+                  best protect highly vulnerable business applications with
+                  interactive panel discussions and roundtables led by subject
+                  matter experts.
+                  <br /> <br />
+                  The main thrust is to focus on educating attendees on how to
+                  best protect highly vulnerable business applications with
+                  interactive panel.
                 </p>
-                
-                <div className="flex justify-center sm:justify-start">
+
                 <a
                   href="/#"
                   className="inline-flex items-center justify-center rounded-md bg-primary px-7 py-3 text-center text-base font-medium text-white duration-300 hover:bg-primary/90"
                 >
-                  Learn More
+                  Know More
                 </a>
-                </div>
               </div>
             </div>
 
@@ -64,7 +61,7 @@ const About = () => {
                     />
                   </div>
 
-                  <div className="relative z-10 mb-4 sm:flex items-center justify-center overflow-hidden bg-primary px-6 py-12 sm:mb-8 sm:h-[160px] sm:p-5 lg:mb-4 xl:mb-8 hidden ">
+                  <div className="relative z-10 mb-4 flex items-center justify-center overflow-hidden bg-primary px-6 py-12 sm:mb-8 sm:h-[160px] sm:p-5 lg:mb-4 xl:mb-8">
                     <div>
                       <span className="block text-5xl font-extrabold text-white">
                         09
@@ -194,6 +191,7 @@ const About = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 
