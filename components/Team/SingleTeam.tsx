@@ -1,7 +1,6 @@
-import { TeamType } from "@/types/team";
 import Image from "next/image";
 
-const SingleTeam = ({ team }: { team: TeamType }) => {
+const SingleTeam = ({ team }: { team: any }) => {
   const { image, name, designation, facebookLink, twitterLink, instagramLink } =
     team;
   return (

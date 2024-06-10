@@ -1,8 +1,7 @@
-import { TeamType } from "@/types/team";
 import SectionTitle from "../Common/SectionTitle";
 import SingleTeam from "./SingleTeam";
 
-const teamData: TeamType[] = [
+const teamData: any = [
   {
     id: 1,
     name: "Adveen Desuza",
@@ -50,7 +49,6 @@ const Team = () => {
       <div className="container">
         <div className="mb-[60px]">
           <SectionTitle
-            subtitle="Our Team"
             title="Meet Our Team"
             paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
             width="640px"
