@@ -1,15 +1,7 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 
 const   Hero = () => {
-  const [email, setEmail] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-  };
-
 
   return (
     <>
@@ -29,7 +21,7 @@ const   Hero = () => {
                     <Link
                       href={"https://talent-connect-developer-frontend.vercel.app/hire"}
                       aria-label="get started button"
-                      className="flex rounded-full bg-black px-7.5 py-2.5 text-white duration-300 ease-in-out hover:bg-blackho dark:bg-btndark dark:hover:bg-blackho"
+                      className="flex rounded-full bg-[#197AFF] px-7.5 py-2.5 text-white duration-300 ease-in-out hover:bg-blackho dark:bg-btndark dark:hover:bg-blackho"
                     >
                       Hire Now
 

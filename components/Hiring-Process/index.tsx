@@ -26,7 +26,7 @@ const listItems = [
 ];
 
 const HiringProcess = () => (
-  <section className="lg:py-28 sm:pt-28 overflow-hidden">
+  <section className="lg:py-28 sm:pt-28 overflow-hidden" id='hirefromtalent'>
     <div className="max-w-7xl mx-auto p-4 sm:p-6 lg:p-8 ">
       <div className="mb-16 sm:text-center text-start">
         <h2 className="text-base text-[#006BFF] font-semibold tracking-wide uppercase">Transform your business

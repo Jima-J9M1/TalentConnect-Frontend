@@ -17,7 +17,7 @@ Dedicated Work Ethic: AASTU instills a dedicated work ethic, ensuring graduates 
 */
 const Features = () => {
   return (
-    <section className="pb-8 sm:pt-20 dark:bg-dark lg:pb-[70px] lg:pt-[120px] mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
+    <section className="pb-8 sm:pt-20 dark:bg-dark lg:pb-[70px] lg:pt-[120px] mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0" id="why-are-developers-the-best">
       <div className="container">
         <SectionTitle
           title="Why Are Developers From AASTU The Best?"
