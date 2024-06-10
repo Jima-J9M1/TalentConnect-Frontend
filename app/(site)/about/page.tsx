@@ -1,4 +1,5 @@
 import About from "@/components/About";
+import AboutUs from "@/components/About/AboutUs";
 import Team from "@/components/Team";
 import { Metadata } from "next";
 
@@ -10,9 +11,9 @@ export const metadata: Metadata = {
 
 const AboutPage = () => {
   return (
-    <main className="px-[24px]">
+    <main className="px-[24px] bg-[#F9FAFB] dark:bg-[#181C31]">
       {/* <Breadcrumb pageName="About Us Page" /> */}
-      <About />
+      <AboutUs />
       <Team />
     </main>
   );

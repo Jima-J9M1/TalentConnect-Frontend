@@ -4,36 +4,45 @@ import SingleTeam from "./SingleTeam";
 const teamData: any = [
   {
     id: 1,
-    name: "Adveen Desuza",
-    designation: "UI Designer",
-    image: "/images/team/team-01.png",
+    name: "Jima Dube",
+    designation: "Web Developer",
+    image: "/images/team/jima-2.jpg",
     facebookLink: "/#",
     twitterLink: "/#",
     instagramLink: "/#",
   },
   {
     id: 2,
-    name: "Jezmin uniya",
-    designation: "Product Designer",
-    image: "/images/team/team-02.png",
+    name: "Mehari Tesfaye",
+    designation: "App Developer",
+    image: "/images/team/se-team-4.jpg",
     facebookLink: "/#",
     twitterLink: "/#",
     instagramLink: "/#",
   },
   {
     id: 3,
-    name: "Andrieo Gloree",
-    designation: "App Developer",
-    image: "/images/team/team-03.png",
+    name: "Haymanot Demiss",
+    designation: "Backend Developer",
+    image: "/images/team/se-team-2.jpg",
     facebookLink: "/#",
     twitterLink: "/#",
     instagramLink: "/#",
   },
   {
     id: 4,
-    name: "Jackie Sanders",
-    designation: "Content Writer",
-    image: "/images/team/team-04.png",
+    name: "Ibsa Abraham",
+    designation: "Backend Developer",
+    image: "/images/team/ibsa.jpg",
+    facebookLink: "/#",
+    twitterLink: "/#",
+    instagramLink: "/#",
+  },
+  {
+    id: 4,
+    name: "Matiyas Seifu",
+    designation: "Mobile Developer",
+    image: "/images/team/se-team-5.jpg",
     facebookLink: "/#",
     twitterLink: "/#",
     instagramLink: "/#",
@@ -46,7 +55,7 @@ const Team = () => {
       id="team"
       className="overflow-hidden bg-gray-1 pb-12 pt-20 dark:bg-dark-2 lg:pb-[90px] lg:pt-[120px]"
     >
-      <div className="container">
+      <div className="">
         <div className="mb-[60px]">
           <SectionTitle
             title="Meet Our Team"
@@ -56,7 +65,7 @@ const Team = () => {
           />
         </div>
 
-        <div className="-mx-4 flex flex-wrap justify-center">
+        <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 justify-center ">
           {teamData.map((team, i) => (
             <SingleTeam key={i} team={team} />
           ))}

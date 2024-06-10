@@ -40,17 +40,10 @@ const Footer = () => {
                     Home
                   </a>
                 </li>
+                
                 <li>
                   <a
-                    href="/#"
-                    className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
-                  >
-                    Features
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/#"
+                    href="/#about"
                     className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
                   >
                     About
@@ -58,10 +51,10 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="/#"
+                    href="/#contact"
                     className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
                   >
-                    Testimonial
+                    Contact Us
                   </a>
                 </li>
               </ul>
@@ -75,34 +68,34 @@ const Footer = () => {
               <ul>
                 <li>
                   <a
-                    href="/#"
+                    href="/#why-are-developers-the-best"
                     className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
                   >
-                    How it works
+                    Why Are Developers From AASTU The Best?
                   </a>
                 </li>
                 <li>
                   <a
-                    href="/#"
+                    href="/#talentpool"
                     className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
                   >
-                    Privacy policy
+                    Our Talent Pool
                   </a>
                 </li>
                 <li>
                   <a
-                    href="/#"
+                    href="/#hirefromtalent"
                     className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
                   >
-                    Terms of Service
+                    Why Hire From Talent Connect?
                   </a>
                 </li>
                 <li>
                   <a
-                    href="/#"
+                    href="/#faq"
                     className="mb-3 inline-block text-base text-gray-7 hover:text-primary"
                   >
-                    Refund policy
+                    FAQ
                   </a>
                 </li>
               </ul>
