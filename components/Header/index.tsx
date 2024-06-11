@@ -153,10 +153,10 @@ const Header = () => {
 
           <div className="mt-7 flex sm:flex-row flex-col sm:items-center gap-6 xl:mt-0">
           <div className="flex sm:flex-row flex-col gap-3 ">
-               <Link href={"https://talent-connect-developer-frontend.vercel.app/hire"} >
+               <Link href={"https://talent-connect-developer-frontend-jet.vercel.app/hire"} >
                 <div className="py-[4px] sm:px-4 sm:border-2 sm:border-[#197AFF] rounded-md cursor-pointer">Hire Now</div>
                </Link>
-               <Link href={"https://talent-connect-developer-frontend.vercel.app/signin"}>
+               <Link href={"https://talent-connect-developer-frontend-jet.vercel.app/signin"}>
                 <div className="py-[4px] sm:px-4 sm:border-2 sm:border-[#197AFF] rounded-md cursor-pointer">Login</div>
                </Link>
           </div>
