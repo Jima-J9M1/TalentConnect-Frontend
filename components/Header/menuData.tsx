@@ -33,17 +33,12 @@ const menuData: Menu[] = [
     ],
   },
 
-  {
-    id: 4,
-    title: "Contact",
-    newTab: false,
-    path: "/#contact",
-  },
+  
   {
     id: 6,
-    title: "Talent",
+    title: "Discover Talent",
     newTab: false,
-    path: "/talent",
+    path: "https://talent-connect-developer-frontend-jet.vercel.app",
   },
   {
     id: 5,
@@ -51,6 +46,12 @@ const menuData: Menu[] = [
     newTab: false,
     path: "/about",
   },
+  {
+    id: 4,
+    title: "Contact Us",
+    newTab: false,
+    path: "/#contact",
+  }
   
 ];
 
