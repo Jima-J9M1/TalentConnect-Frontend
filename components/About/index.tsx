@@ -16,14 +16,11 @@ const About = () => {
                 Empowering Tomorrow’s Innovators
                 </h2>
                 <p className="mb-10 text-base leading-relaxed text-body-color dark:text-dark-6">
-                  The main thrust is to focus on educating attendees on how to
-                  best protect highly vulnerable business applications with
-                  interactive panel discussions and roundtables led by subject
-                  matter experts.
-                  <br /> <br />
-                  The main thrust is to focus on educating attendees on how to
-                  best protect highly vulnerable business applications with
-                  interactive panel.
+                   At TalentConnect, we are proud to hail from Addis Ababa Science and Technology University (AASTU),
+                  renowned for nurturing some of the brightest minds in software engineering.
+                  Our team comprises driven software engineering students and alumni deeply passionate about connecting top talent with leading companies.
+                  With AASTU's rigorous academic programs and our dedication to excellence, we're reshaping the hiring landscape for skilled engineers,
+                  one connection at a time.
                 </p>
 
                 <a
